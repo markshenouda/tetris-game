@@ -1,0 +1,423 @@
+/*
+MIT License
+
+Copyright (c) 2020 Mark Sameh Abdalla Shenouda
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 80px;
+	margin-right: 80px;
+	color: #aab5bb;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #4f5d64;
+	overflow: hidden;
+	z-index: -1;
+}
+.background li {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #47535a;
+    color: transparent;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 7s ease-in forwards infinite;
+}
+undefined
+.background li:nth-child(0) {
+    animation-delay: 0s;
+    left: 30vw;
+    top: 0vh;
+}
+
+.background li:nth-child(1) {
+    animation-delay: 2s;
+    left: 33vw;
+    top: 33vh;
+    border-color: #56666e;
+}
+
+.background li:nth-child(2) {
+    animation-delay: 4s;
+    left: 43vw;
+    top: 83vh;
+    border-color: #56666e;
+}
+
+.background li:nth-child(3) {
+    animation-delay: 6s;
+    left: 60vw;
+    top: 67vh;
+}
+
+.background li:nth-child(4) {
+    animation-delay: 8s;
+    left: 5vw;
+    top: 55vh;
+}
+
+.background li:nth-child(5) {
+    animation-delay: 10s;
+    left: 16vw;
+    top: 52vh;
+}
+
+.background li:nth-child(6) {
+    animation-delay: 12s;
+    left: 94vw;
+    top: 39vh;
+}
+
+.background li:nth-child(7) {
+    animation-delay: 14s;
+    left: 72vw;
+    top: 19vh;
+    border-color: #56666e;
+}
+
+.background li:nth-child(8) {
+    animation-delay: 16s;
+    left: 87vw;
+    top: 26vh;
+}
+
+.background li:nth-child(9) {
+    animation-delay: 18s;
+    left: 45vw;
+    top: 96vh;
+}
+
+.background li:nth-child(10) {
+    animation-delay: 20s;
+    left: 25vw;
+    top: 71vh;
+}
+
+.background li:nth-child(11) {
+    animation-delay: 22s;
+    left: 9vw;
+    top: 41vh;
+}
+
+.background li:nth-child(12) {
+    animation-delay: 24s;
+    left: 74vw;
+    top: 29vh;
+}
+
+.background li:nth-child(13) {
+    animation-delay: 26s;
+    left: 80vw;
+    top: 77vh;
+}
+
+.background li:nth-child(14) {
+    animation-delay: 28s;
+    left: 37vw;
+    top: 63vh;
+}
+
+.background li:nth-child(15) {
+    animation-delay: 30s;
+    left: 57vw;
+    top: 16vh;
+}
+
+.background li:nth-child(16) {
+    animation-delay: 32s;
+    left: 67vw;
+    top: 91vh;
+}
+
+.background li:nth-child(17) {
+    animation-delay: 34s;
+    left: 98vw;
+    top: 76vh;
+}
+
+.background li:nth-child(18) {
+    animation-delay: 36s;
+    left: 1vw;
+    top: 87vh;
+    border-color: #56666e;
+}
+
+.background li:nth-child(19) {
+    animation-delay: 38s;
+    left: 21vw;
+    top: 8vh;
+}
+
+.background li:nth-child(20) {
+    animation-delay: 40s;
+    left: 82vw;
+    top: 49vh;
+}
+
+.background li:nth-child(21) {
+    animation-delay: 42s;
+    left: 51vw;
+    top: 13vh;
+}
+
+
+
+
+.main {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: 90%;
+}
+
+@media only screen and (max-width: 1000px) {
+	body {
+		height: 100%;
+		margin: 0;
+		color: #aab5bb;
+		font-family: 'Roboto', sans-serif;
+	}
+	
+	
+	.main {
+		display: grid;
+		grid-template-columns: 100%;
+		height: 90%;
+	}
+  }
+
+.control {
+	margin-top: 40px;
+}
+
+.score-panel {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	height: 300px;
+	width: 300px;
+	border-radius: 67px;
+	background: linear-gradient(145deg, #55646b, #47545a);
+	box-shadow:  17px 17px 32px #424e54, 
+				-17px -17px 32px #5c6c74;
+}
+
+
+.logo {
+	margin: 10px;
+	user-select: none;
+	text-align: center;
+	font-size: 70px;
+	margin-top: 10px;
+	width: 300px;
+	border-radius: 20px;
+	background: linear-gradient(145deg, #55646b, #47545a);
+	box-shadow:  17px 17px 32px #424e54, 
+				-17px -17px 32px #5c6c74;
+}
+
+
+.playground {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid {
+	height: 500px;
+	width: 250px;
+	border-radius: 10px;
+	background: #4f5d64;
+	box-shadow: inset 11px 11px 22px #455157, 
+				inset -11px -11px 22px #596971;
+	margin: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+.grid div {
+	height: 25px;
+	width: 25px;
+}
+
+
+#start-btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 70px;
+	padding: 5px;
+	font-size: 30px;
+	cursor: pointer;
+	margin: 5px;
+	text-align: center;
+	user-select: none;
+	border-radius: 20px;
+	background: linear-gradient(145deg, #55646b, #47545a);
+	box-shadow:  5px 5px 14px #4e5c63, 
+				-5px -5px 14px #505e65;
+}
+
+
+.next-display {
+	margin-top: 20px;
+	padding: 10px;
+	height: 100px;
+	width: 75px;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	background: #4f5d64;
+	box-shadow: inset 11px 11px 22px #455157, 
+				inset -11px -11px 22px #596971;
+}
+
+
+.next-display div {
+	height: 25px;
+	width: 25px;
+}
+
+#score-display {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+#lines-display {
+	margin-top: 30px;
+	font-size: 25px;
+}
+
+.footer {
+	font-size: 20px;
+	width: 100%;
+	text-align: center;
+	text-shadow: 5px 5px 10px #424e54;
+}
+
+.footer a {
+	color: #aab5bb;
+}
+
+.red {
+	background: linear-gradient(145deg, #ff7f7f, #db6b6b);
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #db6b6b;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+.green {
+	background: linear-gradient(145deg, #7fff8e, #6bdb78);
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #6bdb78;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+.blue {
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #2c38da;
+	border-radius: 5px;
+	background: linear-gradient(145deg, #3442ff, #2c38da);
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+.orange {
+	background: linear-gradient(145deg, #ff5325, #e24620);
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #e24620;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+
+.yellow {
+	background: linear-gradient(145deg, #fffb34, #dad42c);
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #dad42c;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+.purple {
+	background: linear-gradient(145deg, #ff34a3, #da2c89);
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #da2c89;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+.lightblue {
+	height: 23px!important;
+	width: 23px!important;
+	border: 1px solid #4da7db;
+	border-radius: 5px;
+	background: linear-gradient(145deg, #5bc6ff, #4da7db);
+	box-shadow: 5px 5px 5px #3e484d;
+}
+
+
+.clicked {
+	background: #4f5d64!important;
+	box-shadow: inset 11px 11px 22px #455157, 
+				inset -11px -11px 22px #596971!important;
+}
+
